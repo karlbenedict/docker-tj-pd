@@ -1,0 +1,15 @@
+version: '3'
+services:
+  editor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - container-data:/root/container-data
+      - ./local:/root/local
+    restart: on-failure
+    stdin_open: true
+    tty: true
+    
+volumes:
+  container-data:
