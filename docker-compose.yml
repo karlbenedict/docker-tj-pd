@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - container-data:/root/container-data
-      - ./local:/root/local
+      - ~/:/root/local
     restart: on-failure
     stdin_open: true
     tty: true
